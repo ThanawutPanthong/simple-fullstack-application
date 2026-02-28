@@ -20,8 +20,8 @@ export class ItemsService {
   ];
   create(createItemDto: CreateItemDto) {
     const newItem: ItemResponseInterface = {
-      ...createItemDto,
       id: this.items.length + 1,
+      ...createItemDto,
       createdAt: new Date(),
     };
     this.items.push(newItem);
